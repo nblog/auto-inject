@@ -55,8 +55,9 @@ CALL64:
     add rsp, 0x30
     pop rcx
     sub rsp, 0x28
-    xor r8d,r8d
-    xor edx,edx
+    xor r9, r9
+    xor r8, r8
+    xor rdx, rdx
     call rax    ; LoadLibraryExW
     add rsp, 0x28
     ret
