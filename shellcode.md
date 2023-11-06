@@ -106,3 +106,6 @@ E2 8B 72 24 01 DE 66 8B 0C 4E 49 8B 72 1C 01 DE
 @OVERLAY:
 du 'TEST.dll', 0
 ```
+
+## Warning ！！！
+Note: [NytroRST/ShellcodeCompiler](https://github.com/NytroRST/ShellcodeCompiler), does not take the CLR process into account, resulting in the second module from `PEB::PEB_LDR_DATA::InMemoryOrderModuleList`, which does not match the module name correctly, and defaults to treating the second module as a kernel32, while the CLR process The second module is `MSCOREE`, so the program does not support CLR processes.
