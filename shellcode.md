@@ -108,4 +108,4 @@ du 'TEST.dll', 0
 ```
 
 ## Warning ！！！
-Note: [NytroRST/ShellcodeCompiler](https://github.com/NytroRST/ShellcodeCompiler), does not take the CLR process into account, resulting in the second module from `PEB::PEB_LDR_DATA::InMemoryOrderModuleList`, which does not match the module name correctly, and defaults to treating the second module as a kernel32, while the CLR process The second module is `MSCOREE`, so the program does not support CLR processes.
+Note: [NytroRST/ShellcodeCompiler](https://github.com/NytroRST/ShellcodeCompiler), doesn't take into account CLR processes, `PEB::PEB_LDR_DATA::InMemoryOrderModuleList`, can't match the module name correctly, by default, the module after `NTDLL` is treated as `KERNEL32`, and the CLR process module is `MSCOREE`, so this design doesn't support CLR process.
