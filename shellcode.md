@@ -106,6 +106,3 @@ E2 8B 72 24 01 DE 66 8B 0C 4E 49 8B 72 1C 01 DE
 @OVERLAY:
 du 'TEST.dll', 0
 ```
-
-## Warning ！！！
-Note: [NytroRST/ShellcodeCompiler](https://github.com/NytroRST/ShellcodeCompiler), doesn't take into account CLR processes, `PEB::PEB_LDR_DATA::InMemoryOrderModuleList`, can't match the module name correctly, by default, the module after `NTDLL` is treated as `KERNEL32`, and the CLR process module is `MSCOREE`, so this design doesn't support CLR process.
